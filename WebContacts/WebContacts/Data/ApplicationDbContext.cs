@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using firstExercise.Models;
+using WebContacts.Models;
 
-namespace firstExercise.Data
+namespace WebContacts.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {
@@ -13,7 +13,6 @@ namespace firstExercise.Data
             : base(options)
         {
         }
-        public DbSet<firstExercise.Models.Alumno> Alumnos { get; set; }
-        public DbSet<firstExercise.Models.Mamifero> Mamiferos { get; set; }
+        public DbSet<WebContacts.Models.Contact> Contacts { get; set; }
     }
 }
